@@ -93,8 +93,7 @@ def pmam(temp):
 
 def expression(data):
     log_data = []
-    d_ =  list(data.split("\n"))
-    for variable in d_:
+    for variable in data:
         log = re.findall(r'([01][0-9]|[0-9]):([0-5][0-9]|[0-9])([apAP][mM])',variable) 
         log_data.append(log)
     return log_data    
