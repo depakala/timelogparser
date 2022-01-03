@@ -5,6 +5,7 @@ import math
 import streamlit as st
 from datetime import datetime
 import time
+import re
 
 def parser(folder):
 
