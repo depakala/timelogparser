@@ -11,7 +11,7 @@ def parser(folder):
     infolist=[]
     extra = []
     doc = open(folder,"r")
-    formatted = expression(data)
+    formatted = expression(doc)
     number_of_mins = number_of_mins(formatted)
     return output(number_of_mins)
     
