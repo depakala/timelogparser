@@ -13,8 +13,9 @@ def parser(folder):
     extra = []
     doc = open(folder,"r")
     formatted = expression(doc)
+    return formatted
     number_mins = number_of_mins(formatted)
-    return output(number_mins)
+    output(number_mins)
     
 def amorpm(temp):
     log_0_h = int(temp[0][0])
