@@ -14,8 +14,7 @@ def parser(folder):
     doc = open(folder,"r")
     formatted = expression(doc)
     number_mins = number_of_mins(formatted)
-    result = output(number_mins)
-    return result
+    output(number_mins)
     
 def amorpm(temp):
     log_0_h = int(temp[0][0])
@@ -108,9 +107,9 @@ def output(m):
     hour = math.floor((((m/60)/24)-raw_d)*24)
     mi = math.ceil((((((m/60)/24)-raw_d)*24)-hour)*60)
     if(hour == 0):
-        print(f"{floor_h}hours {ceil_m}minutes -- {m} minutes -- {raw_d}days     {mi}minutes -- {raw_h}hours")
+        st.write(f"{floor_h}hours {ceil_m}minutes -- {m} minutes -- {raw_d}days     {mi}minutes -- {raw_h}hours")
     else:
-        print(f"{floor_h}hours {ceil_m}minutes -- {m} minutes -- {raw_d}days {hour}hours {mi}minutes -- {raw_h}hours")
+        st.write(f"{floor_h}hours {ceil_m}minutes -- {m} minutes -- {raw_d}days {hour}hours {mi}minutes -- {raw_h}hours")
 
 
  
@@ -176,18 +175,18 @@ if __name__ == "__main__":
     eight = st.button('errorcase log file')
 
     if one:
-        st.write(parser('Carbon.txt'))
+        parser('Carbon.txt')
     elif two:
-        st.write(parser('TimeLogEnergy.txt'))
+        parser('TimeLogEnergy.txt')
     elif three:
-        st.write(parser('TimeLogNitrogen.txt'))
+        parser('TimeLogNitrogen.txt')
     elif four:
-        st.write(parser('TimeLogWater.txt'))
+        parser('TimeLogWater.txt')
     elif five:
-        st.write(parser('TimeLogWatershed.txt'))
+        parser('TimeLogWatershed.txt')
     elif six:
-        st.write(parser('TimeParser.txt'))
+        parser('TimeParser.txt')
     elif seven:
-        st.write(parser('correctcases.txt'))
+        parser('correctcases.txt')
     elif eight:
-        st.write(parser('errorcase.txt'))  
+        parser('errorcase.txt')  
